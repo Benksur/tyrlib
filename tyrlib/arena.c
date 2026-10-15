@@ -78,7 +78,7 @@ void *tyr_arena_alloc(tyr_arena *arena, size_t size) {
 
 void tyr_arena_reset(tyr_arena *arena) { arena->offset = 0; }
 
-void tyr_arena_free(tyr_arena *arena) {
+void tyr_arena_destroy(tyr_arena *arena) {
   munmap(arena->base, arena->capacity);
   free(arena);
 }
