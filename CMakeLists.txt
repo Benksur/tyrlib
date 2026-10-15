@@ -11,3 +11,9 @@ add_library(tyrlib tyrlib/arena.c)
 target_include_directories(tyrlib PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/tyrlib/include
 )
+
+include(CTest)
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
