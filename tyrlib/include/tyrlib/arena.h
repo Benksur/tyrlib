@@ -3,7 +3,6 @@
 
 #include <stdalign.h>
 #include <stddef.h>
-#include <stdint.h>
 #include <stdlib.h>
 #include <sys/mman.h>
 #include <tyrlib/types.h>

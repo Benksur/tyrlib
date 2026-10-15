@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <tyrlib/arena.h>
 
 // credit to https://github.com/leiapollos
