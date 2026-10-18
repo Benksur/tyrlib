@@ -6,7 +6,6 @@
 
 bool tyr_str_contains(const char *s, const char *substr);
 bool tyr_str_contains_any(const char *s, const char *chars);
-bool tyr_str_contains_rune(const char *s, int c);
 
 bool tyr_str_has_prefix(const char *s, const char *prefix);
 bool tyr_str_has_suffix(const char *s, const char *suffix);
