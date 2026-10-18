@@ -57,7 +57,25 @@ static void test_contains_any(void) {
   TEST_ASSERT(!tyr_str_contains_any("\x01", "\x02"));
 }
 
+static void test_has_prefix(void) {
+  TEST_ASSERT(tyr_str_has_prefix("Gopher", "Go"));
+  TEST_ASSERT(!tyr_str_has_prefix("Gopher", "C"));
+  TEST_ASSERT(tyr_str_has_prefix("Gopher", ""));
+
+  TEST_ASSERT(!tyr_str_has_prefix("Go", "Gopher"));
+}
+
+static void test_has_suffix(void) {
+  TEST_ASSERT(tyr_str_has_suffix("Amigo", "o"));
+  TEST_ASSERT(!tyr_str_has_suffix("Amigo", "O"));
+  TEST_ASSERT(!tyr_str_has_suffix("Amigo", "Ami"));
+  TEST_ASSERT(tyr_str_has_suffix("Amigo", ""));
+}
+
 int main(void) {
   test_contains();
+  test_contains_any();
+  test_has_prefix();
+  test_has_suffix();
   return EXIT_SUCCESS;
 }
